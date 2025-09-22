@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" th:replace="~{base::parent(~{::#content},~{::title},~{::script})}">
+<head>
+<meta charset="UTF-8">
+<title>Edit Page</title>
+  <link rel="stylesheet" data-th-href="@{'/css/output.css'}">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+</head>
+<body>
+<section id="content">
+ <h2 class="text-3xl font-bold mb-12 animate__animated animate__fadeInUp gap-5">Edit Contacts</h2>
+      <div class="grid grid-cols-12 mt-4">
+        <div class="col-span-4 md:col-span-2 lg:col-span-3 xl:col-span-4"></div>
+        <div class="col-span-12 md:col-span-8 lg:col-span-6 xl:col-span-4">
+                <div
+            class="block p-6 border-t-[10px] border-blue-700 bg-white rounded-xl shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-blue-700 dark:hover:bg-gray-700"
+          >
+       
+          
+          
+<form class="max-w-sm mx-auto" th:action="@{/dashboard/edit}" th:object="${user}" method="post">
+ <input type="hidden" th:field="*{uid}" />
+ 
+<div class="mb-5">
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Name</label>
+    <input type="text" th:field="*{name}"  id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required />
+  </div>
+  <div class="mb-5">
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Username</label>
+    <input type="text" th:field="*{username}"  id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required />
+  </div>
+  <div class="mb-5">
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+    <input type="email" th:field="*{email}" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required />
+  </div>
+  <div class="mb-5">
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Role</label>
+    <input type="text" th:field="*{role}" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required />
+  </div>
+  
+  <button type="submit" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 
+font-medium rounded-lg text-sm px-6 py-4 text-center me-2 mb-2">Save</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form th:action="@{/dashboard/edit}" th:object="${user}" method="post">
+<input type="hidden" th:field="*{uid}" class="px-6 py-2" />
+<label>Name:</label>
+<input type="text" th:field="*{name}" class="px-6 py-2"/><br><br>
+<label>Username:</label>
+<input type="text" th:field="*{username}" class="px-6 py-2" /><br><br>
+<label>Email:</label>
+<input type="email" th:field="*{email}" class="px-6 py-2"/><br><br>
+<label>Role:</label>
+<input type="text" th:field="*{role}" class="px-6 py-2 " /><br><br> 
+<button type="submit" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 
+font-medium rounded-lg text-sm px-6 py-4 text-center me-2 mb-2">Save</button>-->
+
+</form> 
+
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- <h2>Edit User</h2>
+<form th:action="@{/update}" th:object="${user}" method="post">
+    <input type="hidden" th:field="*{id}"/>
+    Username: <input type="text" th:field="*{username}" required/><br/>
+    Email: <input type="email" th:field="*{email}" required/><br/>
+    Password: <input type="password" th:field="*{password}" required/><br/>
+    <button type="submit">Update</button>
+</form> -->
+
+</body>
+</html>

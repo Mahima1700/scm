@@ -1,0 +1,41 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+\
+footer {
+   margin-top: 5rem;
+   background-color: #111725;
+   text-align: center;
+   margin-bottom: 2rem;
+}
+
+.footer .share a{
+   margin: 0 .3rem ;
+   height: 4.5rem;
+   width: 4.5rem;
+   font-size: 2rem;
+   line-height: 4.5rem;
+   border-radius: 50%;
+   color: #ffffff;
+   background-color: #000000;
+   
+}
+.footer .share a:hover{
+   background-color: rgb(236,165,51);
+}
+
+.footer .credit{
+   color: #efe9e9;
+   text-align: center;
+   font-size: 2rem;
+   padding-top: 2.5rem;
+   margin-top: 1.5rem;
+   padding: 1.5rem ;
+   border-top: .1rem solid rgba(0,0,0,.1);
+}
+.footer .credit span{
+   color: #db7c4c;
+}
